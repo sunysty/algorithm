@@ -28,8 +28,6 @@ nums의 길이(N)는 1 이상 10,000 이하의 자연수이며, 항상 짝수로
 */
 
 function solution(nums) {
-        
     let result = [...new Set(nums)];
     return result.slice(0, nums.length / 2).length;
-    
 }
