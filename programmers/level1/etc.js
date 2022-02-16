@@ -1,10 +1,11 @@
-function solution(s) {
-    let answer = '';
-    let str = Array.from(...s)    
-    console.log(str)
+function solution(arr, divisor) {
+    let answer = [];
+    answer = arr.filter((x) => Number.isInteger(x / divisor) === true);
+    answer.sort((a, b) => a - b);
+    if (answer.length === 0) {
+        return answer.push(-1);
+    }
     return answer;
 }
 
-let s = 'Zbcdefg'
-
-console.log(solution(s))
+solution([3, 2, 6], 10);
